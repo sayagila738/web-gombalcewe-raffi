@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gombal Cewek By Raffi 🎮</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Gombal Cewek By Raffi 🎮</h1>
+    <p>Bikin hatinya meleleh dengan kata-kata gombal keren nan manis</p>
+  </header>
+
+  <main>
+    <div class="card" id="quote-card">
+      <p id="quote-text">Klik tombol di bawah untuk dapetin gombalan spesial buat dia 💜</p>
+      <button id="new-quote-btn">Gombalin Sekarang</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Raffi — Always Gaming & Gombal</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "Kenapa kalau nyebrang lihat kanan kiri, karna kalo aku lihat kamu aku salting.",
+      "Apa bedanya kamu sama bedak bayi, gada bedanya soalnya sama sama my baby.",
+      "Apa bedanya kamu sama martabak, gada bedanya soalnya sama sama manis.",
+      "Kamu tahu nggak bedanya kamu sama senja, kalau senja cuma bikin indah soreku, tapi kamu bikin indah hidupku.",
+      "Tau kepanjangan you tube ga?, you to be mine [kamu menjadi milikku].",
+      "Apa perbedaan kamu sama rumus fisika, kalo rumus fisika susah di hafalin kalo kamu susah di lupain.",
+      "Buah salak baru di petik, buah jambu buah delima, ada banyak wanita cantik tapi cuman kamu yang aku cintai.",
+      "Kamu ibaratkan skin langka yang bikin aku bangga dan aku gak mau tukar-tukar.",
+      "Ikan hiu makan tomat, I love you so much.",
+      "Apa bedanya kamu sama jam12, kalo jam 12 itu kesiangan kalo kamu kesayangan."
+    ];
+
+    const quoteText = document.getElementById('quote-text');
+    const newQuoteBtn = document.getElementById('new-quote-btn');
+
+    function getRandomQuote() {
+      return quotes[Math.floor(Math.random() * quotes.length)];
+    }
+
+    newQuoteBtn.addEventListener('click', () => {
+      quoteText.textContent = getRandomQuote();
+      quoteText.classList.add('fade');
+      setTimeout(() => {
+        quoteText.classList.remove('fade');
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>
